@@ -13,12 +13,10 @@ public class PrimePrinterHelper {
     private int primeIndex = 1;
     private int ord = 2;
     private int square = 9;
-    private int pageNumber = 1;
-    private int pageOffset = 1;
 
     public void printPrimes() {
         generatePrimes();
-        printPrimeNumbers();
+        printNumbers(primes, numberOfPrimes);
     }
 
     private void generatePrimes() {
@@ -50,7 +48,10 @@ public class PrimePrinterHelper {
         }
     }
 
-    private void printPrimeNumbers() {
+    private void printNumbers(int[] primes, int numberOfPrimes) {
+        int pageNumber = 1;
+        int pageOffset = 1;
+
         while (pageOffset <= numberOfPrimes) {
             System.out.print("The First ");
             System.out.print(Integer.toString(numberOfPrimes));
